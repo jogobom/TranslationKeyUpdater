@@ -1,6 +1,6 @@
 public static class KeyReformatter
 {
-    public static string ToSnakeCase(this string key)
+    public static (string original, string replacement) PairWithSnakeCase(this string key)
     {
         var delimeters = new[] { ' ', ':' };
         var words = key.Split(delimeters, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
@@ -8,7 +8,7 @@ public static class KeyReformatter
         var firstWord = words.Take(1);
         var subsequentWords = words.Skip(1).Select(CapitalizeFirstLetter);
         
-        return string.Join(string.Empty, firstWord.Concat(subsequentWords));
+        return (key, string.Join(string.Empty, firstWord.Concat(subsequentWords)));
     }
 
     private static string CapitalizeFirstLetter(string word)

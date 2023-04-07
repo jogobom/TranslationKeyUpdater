@@ -10,6 +10,6 @@ public class KeyReformatterTests
     [InlineData("a key: with a colon", "aKeyWithAColon")]
     public void ToSnakeCase(string input, string expectedResult)
     {
-        input.ToSnakeCase().Should().Be(expectedResult);
+        input.PairWithSnakeCase().Should().Be((input, expectedResult));
     }
 }
