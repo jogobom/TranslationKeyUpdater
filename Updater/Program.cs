@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 
-const string translationsDir = "/Users/chris/dev/bitbucket/TranslationKeyUpdater/TestFiles";
-const string sourceFilesDir = "/Users/chris/dev/bitbucket/TranslationKeyUpdater/TestFiles";
+const string translationsDir = "/Users/chris/dev/github/TranslationKeyUpdater/TestFiles";
+const string sourceFilesDir = "/Users/chris/dev/github/TranslationKeyUpdater/TestFiles";
 const string sourceLanguage = "en-US";
 
 var timer = Stopwatch.StartNew();
