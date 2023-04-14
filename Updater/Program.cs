@@ -40,7 +40,7 @@ foreach (var codeFile in codeFiles)
 
         var newContent = fileContent;
 
-        foreach (var keyToReplace in keysWithReplacements.Where(p => newContent.Contains(p.original)))
+        foreach (var keyToReplace in keysWithReplacements.Where(p => newContent.Contains(p.original)).OrderByDescending(p => p.original.Length))
         {
             newContent = newContent.Replace(keyToReplace.original, keyToReplace.replacement);
         }
